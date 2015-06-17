@@ -6,8 +6,8 @@ description: Emitter provide methods to emit and listen for events
 
 */
 
-var proto = include('@dmail/proto');
-var Notifier = include('@dmail/notifier');
+var proto = include('dmail/proto');
+var Notifier = include('dmail/notifier');
 
 var Emitter = proto.extend({
 	Notifier: Notifier,
