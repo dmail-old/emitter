@@ -1,6 +1,6 @@
-var EmitterInterface = require('../EmitterInterface');
-var Event = require('../Event');
-var proto = require('@dmail/proto');
+var EmitterInterface = include('../EmitterInterface/index.js');
+var Event = include('../Event/index.js');
+var proto = include('dmail/proto');
 
 var EventEmitterInterface = proto.extend.call(EmitterInterface, {
 	dispatchEvent: function(event){
@@ -39,4 +39,4 @@ var EventEmitterInterface = proto.extend.call(EmitterInterface, {
 	}
 });
 
-module.exports = EventEmitterInterface;
+return EventEmitterInterface;

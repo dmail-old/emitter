@@ -1,5 +1,5 @@
-var Emitter = require('Emitter');
-var proto = require('@dmail/proto');
+var Emitter = require('../index.js');
+var proto = require('dmail/proto');
 
 var EventEmitter = proto.extend.call(Emitter, {
 	handleEvent: function(e){
@@ -7,4 +7,4 @@ var EventEmitter = proto.extend.call(Emitter, {
 	}
 });
 
-module.exports = EventEmitter;
+return EventEmitter;

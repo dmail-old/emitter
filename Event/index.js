@@ -1,15 +1,21 @@
-var Event = {
+var proto = include('dmail/proto');
+
+var Event = proto.extend({
 	type: null,
-	target: null,
+	target: undefined,
 	currentTarget: null,
-	bubbles: false,
+	bubble: false,
 	stopped: false,
 	defaultPrevented: false,
 	args: null,
 
-	constructor: function(type, canBubble){
+	constructor: function(type, options){
 		this.type = type;
-		this.bubbles = Boolean(canBubble);
+		if( options ){
+			for(var key in options){
+				this[key] = options[key];
+			}
+		}
 	},
 
 	stopPropagation: function(){
@@ -27,6 +33,6 @@ var Event = {
 
 		return !this.stopped;
 	}
-};
+});
 
-module.exports = Event;
+return Event;

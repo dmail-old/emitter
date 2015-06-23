@@ -1,3 +1,4 @@
+
 var EmitterInterface = {
 	on: function(){
 		return this.emitter.on.apply(this.emitter, arguments);
@@ -16,4 +17,4 @@ var EmitterInterface = {
 	}
 };
 
-module.exports = EmitterInterface;
+return EmitterInterface;
